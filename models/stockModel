@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+
+const ipSchema = new mongoose.Schema({
+  ip: { type: String, required: true },
+  stock: { type: String, required: true },
+  likes: { type: Number, default: 0 }
+});
+
+const StockModel = mongoose.model('Ip', ipSchema);
+
+module.exports = StockModel;
